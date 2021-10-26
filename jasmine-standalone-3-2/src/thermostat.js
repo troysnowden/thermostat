@@ -9,7 +9,7 @@ class Thermostat {
     this.currentEnergyUsage = 'medium-usage';
   };
 
-  up(increase) {
+  up(increase = 1) {
     if((this.currentTemperature + increase) > this.maxTemp){
       return "Cannot increase over the maxiumum temperature";
     } else {
@@ -18,7 +18,7 @@ class Thermostat {
     }
   }
 
-  down(decrease) {
+  down(decrease = 1) {
     if((this.currentTemperature - decrease) < this.minTemp){
       return "Cannot decrease under the minimum temperature";
     } else {
